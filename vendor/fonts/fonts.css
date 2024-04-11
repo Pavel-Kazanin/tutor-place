@@ -33,3 +33,12 @@
   src: url(./Inter-Bold.woff2) format('woff2'),
        url(./Inter-Bold.woff) format('woff');
 }
+
+@font-face {
+  font-family: 'GT Walsheim Pro';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(./GTWalsheimPro-Medium.woff2) format('woff2'),
+       url(./GTWalsheimPro-Medium.woff) format('woff');
+}
