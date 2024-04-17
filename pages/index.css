@@ -15,7 +15,7 @@ body {
   width: 100%;
   background-color: rgb(29, 37, 50);
   padding: 20px 16px 0 16px;
-  box-sizing: border-box;
+  box-sizing: border-box;  
 }
 
 .header::before {
@@ -50,6 +50,7 @@ body {
 }
 
 .lead {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -57,17 +58,17 @@ body {
     "image"
     "subtitle"
     "button";
-  background-color: rgb(29, 37, 50);
+  background-color: rgb(29, 37, 50);  
 }
 
-.lead__title {
+.lead__title {  
   color: rgb(255, 255, 255);
   font-size: clamp(25px, 5cqw, 72px);
   font-weight: 400;
   line-height: 105%;
   letter-spacing: -0.8px;
   text-align: center;
-  margin: 49px 36px 16px 36px
+  margin: 49px 36px 16px 36px;
 }
 
 .lead__title_accent {
@@ -75,7 +76,7 @@ body {
 }
 
 .lead__image {
-  background-image: url(../images/man.png);
+  background-image: url(../images/man.svg);
   background-position: center;
   background-size: cover;
   width: clamp(321px, 80cqw, 592px);
@@ -150,3 +151,123 @@ body {
   filter: none;
 }
 
+.attainments {   
+  max-width: 1284px;
+  width: 100%;
+  margin: 0px auto 0 auto;
+  border-radius: 20px; 
+  overflow-x: hidden;
+}
+
+.attainments__container {
+  width: 100%;
+  background: linear-gradient(203.63deg, rgb(50, 62, 81) -4.954%, rgb(29, 37, 50) 58.975%);
+  border-radius: 20px;
+  padding: 40px 30px 102px 30px;
+  box-sizing: border-box;  
+  margin-top: 70px;
+}
+
+.attainments__title {
+  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: clamp(23px, 4cqw, 45px);
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-align: center;  
+  margin: 0 auto 30px auto;
+  width: clamp(180px, 53cqw, 596px);
+  box-sizing: border-box;
+}
+
+.attainments__title::before {
+  content: "";
+  position: absolute;
+  top: -88px;
+  right: -105px;
+  width: 87.59px;
+  height: 87.59px;
+  transform: rotate(-25.73deg);
+  box-sizing: border-box;
+  border-radius: 50%;  
+  background: radial-gradient(96.01% 95.01% at 51% 5%, rgb(222, 168, 255), rgb(157, 106, 217) 44.511%, rgb(122, 43, 246) 100%);
+}
+
+.attainments__list {
+  width: 100%;
+  max-width: 650px;
+  min-width: 260px;
+  display: grid;
+  gap: 50px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 300px));  
+  padding: 0;
+  list-style-type: none;
+  margin: 0 auto;
+}
+
+.attainments__list-item {
+  position: relative;
+  z-index: 0;  
+  height: clamp(273px, 50cqw, 310px);
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  align-items: center;
+  padding-top: 69px;  
+  border-radius: 20px;
+  backdrop-filter: blur(61px);
+  background: rgba(51, 62, 81, 1);  
+  box-sizing: border-box;
+}
+
+.attainments__list-item::before {
+  content: "";
+  z-index: -1;
+  width: clamp(226px, 67cqw, 260px);
+  height: 235px;
+  bottom: -17px;
+  position: absolute;
+  border-radius: 20px;
+  backdrop-filter: blur(55px);
+  background: rgba(51, 62, 81, 0.6);  
+}
+
+.list-item__icon {
+  position: relative;  
+  width: 83px;
+  height: 83px;   
+  transform-style: preserve-3d;  
+}
+
+.list-item__icon::before {  
+  content: "";
+  position: absolute;
+  transform: translate3d(-50%, -50%, -1px);
+  left: 50%;
+  top: 50%;  
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background-image: url(../images/smile-stars1.svg);
+  background-position: center;
+  filter: blur(26px);
+}
+
+.list-item__icon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  
+}
+
+.list-item__text {  
+  width: clamp(214px, 40cqw, 262px);
+  color: rgb(255, 255, 255);  
+  font-size: clamp(16px, 3cqw, 19px);
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: -0.7px;
+  text-align: center;
+  margin: 0;
+}
