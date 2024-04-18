@@ -168,6 +168,13 @@ body {
   margin-top: 70px;
 }
 
+@media screen and (min-width: 1280px) {
+   .attainments__container {
+    padding: 130px 30px 150px 30px; 
+    margin-top: 195px;     
+   }
+}
+
 .attainments__title {
   position: relative;
   color: rgb(255, 255, 255);
@@ -186,15 +193,22 @@ body {
   position: absolute;
   top: -88px;
   right: -105px;
-  width: 87.59px;
-  height: 87.59px;
+  width: clamp(87.59px, 10cqw, 152px);
+  height: clamp(87.59px, 10cqw, 152px);
   transform: rotate(-25.73deg);
   box-sizing: border-box;
   border-radius: 50%;  
   background: radial-gradient(96.01% 95.01% at 51% 5%, rgb(222, 168, 255), rgb(157, 106, 217) 44.511%, rgb(122, 43, 246) 100%);
 }
 
-.attainments__list {
+@media screen and (min-width: 1280px) {
+  .attainments__title::before {
+    top: -230px;
+    right: -230px; 
+  }
+}
+
+.attainments__list {  
   width: 100%;
   max-width: 650px;
   min-width: 260px;
@@ -220,6 +234,26 @@ body {
   backdrop-filter: blur(61px);
   background: rgba(51, 62, 81, 1);  
   box-sizing: border-box;
+}
+
+.attainments__list-item:first-child::before {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: -8px;
+  width: clamp(22px, 5cqw, 84px);
+  height: clamp(22px, 5cqw, 84px);
+  transform: rotate(-25.73deg);
+  box-sizing: border-box;
+  border-radius: 50%;  
+  background: radial-gradient(66.76% 77.20% at 65% 78%,rgb(4, 93, 250),rgb(15, 193, 215) 83.164%,rgb(6, 246, 199) 100%);
+}
+
+@media screen and (min-width: 960px) {
+  .attainments__list-item:first-child::before {
+    top: -105px;
+    left: -120px; 
+  }
 }
 
 .attainments__list-item::before {
